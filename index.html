@@ -25,7 +25,7 @@
       --font-body:       'Work Sans', sans-serif;
       --font-label:      'Noto Sans SC', sans-serif;
 
-      --nav-h: 72px;
+      --nav-h: 108px;
     }
 
     html { scroll-behavior: smooth; }
@@ -45,11 +45,13 @@
       top: 0;
       z-index: 100;
       background: var(--honeydew);
-      height: var(--nav-h);
+      min-height: var(--nav-h);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 5vw;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.75rem 5vw;
       box-shadow: 0 1px 0 rgba(0,0,0,0.08);
     }
 
@@ -269,7 +271,7 @@
 
     /* ─── Services ──────────────────────────────────────────────────────────── */
     #services {
-      background: var(--white);
+      background: var(--peony);
       padding: 7rem 5vw;
     }
 
@@ -461,6 +463,12 @@
 
     /* ─── Responsive ─────────────────────────────────────────────────────────── */
     @media (max-width: 768px) {
+      nav {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        padding: 0 5vw;
+      }
       .nav-links { display: none; }
       .nav-toggle { display: flex; }
 
